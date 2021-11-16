@@ -1,0 +1,65 @@
+---
+title: "week 9"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r}
+typeof(c("John", "Mary"))
+typeof(c(2, 3.1412))
+typeof(c(TRUE, TRUE, F))
+```
+**class** is a catergorisation method that categorises different values based on **what we can do with those values**
+*type: man and woman
+*class: differdnce based on skills.(plumber class,teacher class)
+***
+
+```{r}
+# date time information
+dateTimeInfo <- "2021-01-01 12:03:33"
+typeof(dateTimeInfo)
+```
+
+```{r}
+dateTimeInfo + 20
+# character class value + 20
+```
+
+ we can choose proper parsing function to teach R understand a date time value is more than a character--teaching R understand a class called date/time.
+ 
+```{r}
+dateTimeInfo2 <- lubridate::ymd_hms("2021-01-01 12:03:33") 
+class(dateTimeInfo2)
+```
+  * luberidate::ymd_hms is a parsing function to teach R understand date time
+ 
+ 
+ ```{r}
+ dateTimeInfo2 + lubridate::seconds(20)
+ ```
+type: how we store **raw** information
+class: what we (R) can do with different informations
